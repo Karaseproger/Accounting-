@@ -7,7 +7,7 @@
 <h1>Groups</h1>
 <ul>
     <li th:each="group : ${groupaten}">
-        <a th:href="@{/groups/{groupId}/attendance(id=${group.id})}" th:text="${group.name}"></a>
+        <a th:href="@{/groups/{groupId}/attendance(groupId=${group.id})}" th:text="${group.name}"></a>
     </li>
 </ul>
 </body>

@@ -42,16 +42,24 @@ public class controllerRecord {
     }
 
     @GetMapping("/groups/{groupId}/attendance")
-    public String getAttendanceBygroup(@PathVariable Long groupId, Model model){
+    public String getAttendanceByGroup(@PathVariable Long groupId, Model model) {
         List<Attendance> attendances = attendanceService.getAttendanceByGroup(groupId);
-        Grouper grouper = groupRepository.findById(groupId).orElseThrow(() -> new IllegalArgumentException("Group not found"));
 
+        // Проверяем, существует ли группа
+        Grouper grouper = groupRepository.findById(groupId)
+                .orElseThrow(() -> new IllegalArgumentException("Group not found"));
+
+        // Проверяем, есть ли данные о посещаемости
+        if (attendances == null || attendances.isEmpty()) {
+            throw new IllegalStateException("No attendance data found for this group");
+        }
 
         model.addAttribute("group", grouper);
         model.addAttribute("attendances", attendances);
 
-        return "attendans";
+        return "attendance";
     }
+
 
 
 
