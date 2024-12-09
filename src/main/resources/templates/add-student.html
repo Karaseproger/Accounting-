@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавить студента</title>
+    <link rel="stylesheet" href="/css/addAddSG.css">
+    <style>
+        /* Копируем CSS для кнопки "Назад" */
+        .btn {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none; /* Убираем подчеркивание */
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff; /* Белый текст */
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        a.btn.back-btn {
+            margin-top: 15px;
+            display: block;
+            width: 100%; /* Кнопка на всю ширину */
+            background: linear-gradient(135deg, #ff7043, #d84315); /* Оранжевый градиент */
+        }
+
+        a.btn.back-btn:hover {
+            background: linear-gradient(135deg, #d84315, #bf360c); /* Более тёмный оранжевый */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 112, 67, 0.5);
+        }
+
+        a.btn.back-btn:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Добавить студента</h1>
+    <form th:action="@{/add-student}" method="post">
+        <div>
+            <label>Имя:</label>
+            <input type="text" name="firstName" placeholder="Введите имя" required>
+        </div>
+        <div>
+            <label>Фамилия:</label>
+            <input type="text" name="lastName" placeholder="Введите фамилию" required>
+        </div>
+        <div>
+            <label>Группа:</label>
+            <select name="groupId" required> <!-- Изменено с "group" на "groupId" -->
+                <option value="" disabled selected>Выберите группу</option>
+                <option th:each="group : ${groups}" th:value="${group.id}" th:text="${group.name}"></option>
+            </select>
+        </div>
+        <button type="submit" class="btn">Сохранить</button>
+    </form>
+
+    <a href="/manage" class="btn back-btn">Назад</a>
+
+</div>
+</body>
+</html>

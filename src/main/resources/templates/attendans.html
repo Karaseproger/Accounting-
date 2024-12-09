@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Attendance</title>
+</head>
+<body>
+<h1>Attendance for Group: <span th:text="${group.name}"></span></h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Student Name</th>
+        <th>Date</th>
+        <th>Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="attendance : ${attendances}">
+        <td th:text="${attendance.student.name}"></td>
+        <td th:text="${attendance.date}"></td>
+        <td th:text="${attendance.status}"></td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/groups">Back to Groups</a>
+</body>
+</html>

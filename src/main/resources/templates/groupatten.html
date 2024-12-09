@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Groups</title>
+</head>
+<body>
+<h1>Groups</h1>
+<ul>
+    <li th:each="group : ${groupaten}">
+        <a th:href="@{/groups/{groupId}/attendance(id=${group.id})}" th:text="${group.name}"></a>
+    </li>
+</ul>
+</body>
+</html>

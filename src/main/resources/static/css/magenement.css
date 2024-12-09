@@ -1,0 +1,176 @@
+/* Общий фон */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f4f8, #dfe7fd); /* Светлый градиент */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Контейнер */
+.container {
+    background: #ffffff; /* Белый фон */
+    padding: 30px 40px;
+    border-radius: 15px; /* Закруглённые углы */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2); /* Глубокая тень */
+    max-width: 800px;
+    width: 90%;
+    animation: fadeIn 0.8s ease-in-out; /* Эффект появления */
+}
+
+/* Эффект появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Заголовки */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1a237e; /* Глубокий синий */
+    margin-bottom: 20px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3949ab; /* Средний синий */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3949ab;
+    padding-bottom: 5px;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background: #1a237e; /* Глубокий синий */
+    color: #ffffff; /* Белый текст */
+}
+
+thead th {
+    padding: 12px 10px;
+    text-align: left;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    background: #f8f9fa; /* Светлый серый */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    transform: scale(1.02); /* Увеличение при наведении */
+    background: #e8eaf6; /* Лёгкий синий */
+}
+
+td {
+    padding: 10px;
+    font-size: 0.95rem;
+    color: #333; /* Насыщенный серый */
+    vertical-align: middle;
+}
+
+/* Список групп */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 8px 15px;
+    margin-bottom: 5px;
+    background: #e3f2fd; /* Светло-голубой */
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1565c0; /* Голубой текст */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul li:hover {
+    background: #bbdefb; /* Более тёмный голубой */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    background: linear-gradient(135deg, #42a5f5, #1e88e5); /* Синий градиент */
+    box-shadow: 0 4px 10px rgba(66, 165, 245, 0.3); /* Глубокая тень */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #1e88e5, #1565c0); /* Более тёмный градиент */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(66, 165, 245, 0.5); /* Усиленная тень */
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Блок кнопок */
+.section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.section a {
+    margin: 5px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}

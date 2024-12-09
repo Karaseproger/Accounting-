@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавить группу</title>
+    <link rel="stylesheet" href="/css/addAddSG.css">
+</head>
+<body>
+<div class="container">
+    <h1>Добавить группу</h1>
+    <form th:action="@{/add-group}" th:object="${group}" method="post">
+        <div>
+            <label>Название группы:</label>
+            <input type="text" th:field="*{name}" placeholder="Введите название" required>
+        </div>
+        <button type="submit" class="btn">Сохранить</button>
+    </form>
+
+</div>
+</body>
+</html>

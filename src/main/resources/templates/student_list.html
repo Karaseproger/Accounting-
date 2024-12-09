@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Журнал посещаемости</title>
+    <link rel="stylesheet" href="/css/List.css">
+</head>
+<body>
+<div class="journal-container">
+    <h1 th:text="'Группа: ' + ${group.name}">Группа</h1>
+    <form th:action="@{/check/{id}/attendance(id=${group.id})}" method="post">
+        <table>
+            <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Статус</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student : ${students}">
+                <td th:text="${student.firstName}"></td>
+                <td th:text="${student.lastName}"></td>
+                <td>
+                    <select name="status" required>
+                        <option value="PRESENT">Пришёл</option>
+                        <option value="ABSENT">Не пришёл</option>
+                        <option value="SICK">Заболел</option>
+                        <option value="LATE">Опоздал</option>
+                    </select>
+                    <input type="hidden" name="studentId" th:value="${student.id}"/>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <button type="submit">Сохранить посещаемость</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #e9f7e9, #f7fdf7); /* Лёгкий градиент фона */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.journal-container {
+    background: #ffffff; /* Белый фон контейнера */
+    margin: 20px auto;
+    padding: 30px 40px;
+    border-radius: 20px; /* Сильное закругление */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Более глубокая тень */
+    width: 95%;
+    max-width: 1000px;
+    animation: fadeIn 0.8s ease-in-out; /* Эффект появления */
+}
+
+/* Эффект появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    color: #2b5d2e; /* Ещё более насыщенный тёмно-зелёный */
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Расстояние между строками */
+    margin-bottom: 20px;
+}
+
+thead {
+    background: #2b5d2e; /* Тёмно-зелёный фон заголовка */
+    color: #ffffff; /* Белый текст */
+}
+
+thead th {
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+tbody tr {
+    background: #ffffff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05); /* Тень для строк */
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+tbody tr:hover {
+    transform: translateY(-5px); /* Эффект подъёма */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Усиленная тень */
+}
+
+td {
+    padding: 12px 20px;
+    font-size: 15px;
+    color: #4f4f4f; /* Насыщенный серый текст */
+    vertical-align: middle;
+}
+
+/* Всплывающее меню (селектор) */
+select {
+    padding: 10px 15px;
+    border: 1px solid #d1e7d1; /* Светло-зелёный бордер */
+    border-radius: 10px;
+    background: #f8fff8; /* Лёгкий зеленоватый фон */
+    font-size: 14px;
+    color: #3e3e3e;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05); /* Внутренняя тень */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+    border-color: #2b5d2e; /* Зелёная подсветка */
+    outline: none;
+    box-shadow: 0 0 10px rgba(43, 93, 46, 0.3); /* Внешняя зелёная подсветка */
+}
+
+/* Кнопка */
+button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #38c172, #2b5d2e); /* Зелёный градиент */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); /* Лёгкая тень текста */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #2b5d2e, #248f44); /* Градиент при наведении */
+    transform: translateY(-3px);
+    box-shadow: 0px 7px 20px rgba(43, 93, 46, 0.4); /* Глубокая зелёная тень */
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    td, th {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}

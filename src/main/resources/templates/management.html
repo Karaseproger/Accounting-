@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>управление</title>
+    <link rel="stylesheet" href="/css/magenement.css">
+</head>
+<body>
+<div class="container">
+    <h1>управление студентами и группами</h1>
+    <div>
+        <h2>Студенты</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Группа</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="student : ${students}">
+                <td th:text="${student.firstName}"></td>
+                <td th:text="${student.lastName}"></td>
+                <td th:text="${student.group.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2>Группы</h2>
+        <ul>
+            <li th:each="group : ${groups}" th:text="${group.name}"></li>
+        </ul>
+    </div>
+
+    <div class="section mark-attendance">
+        <a href="/add-student" class="btn">Добавить студента</a>
+        <a href="/add-group" class="btn">Добавить группу</a>
+        <a href="/record" class="btn">посещаймость</a>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+/* Общий фон */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e3fdfd, #ffe6fa); /* Мягкий градиент */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Контейнер */
+.container {
+    background: #ffffff; /* Белый фон */
+    padding: 30px 40px;
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Глубокая тень */
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 0.8s ease-in-out; /* Плавное появление */
+}
+
+/* Эффект появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #2b2e4a; /* Глубокий синий */
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Поля формы */
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2b2e4a; /* Тёмный синий */
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd; /* Серый бордер */
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #42a5f5; /* Синий при фокусе */
+    box-shadow: 0 0 8px rgba(66, 165, 245, 0.4); /* Лёгкая синяя подсветка */
+}
+
+/* Кнопка */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #42a5f5, #1e88e5); /* Синий градиент */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(66, 165, 245, 0.3); /* Глубокая тень */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1e88e5, #1976d2); /* Тёмно-синий при наведении */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(66, 165, 245, 0.5); /* Усиленная тень */
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 30px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+
+    input[type="text"],
+    select {
+        font-size: 0.9rem;
+    }
+}

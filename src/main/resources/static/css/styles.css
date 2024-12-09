@@ -1,0 +1,192 @@
+/* Основные стили */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color:  #ecf0f1;;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Навигация */
+.navbar {
+    background: linear-gradient(90deg, #3E8E41, #2E7D32); /* Градиент темно-зеленый */
+    padding: 1rem 2rem;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Легкая тень */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Для адаптации логотипа и других элементов */
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.logo .accent {
+    color: #FFC107;
+    text-transform: uppercase;
+}
+
+/* Основной контент */
+.main-content {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 2rem;
+    height: calc(100vh - 4rem);
+    box-sizing: border-box;
+    flex-wrap: wrap; /* Перенос секций на следующую строку для маленьких экранов */
+}
+
+/* Секции */
+.section {
+    flex: 1;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Глубокая тень для секций */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 300px; /* Минимальная ширина секции */
+    max-width: 450px; /* Ограничение ширины для больших экранов */
+    margin: 10px; /* Отступы между секциями */
+}
+
+.section:hover {
+    transform: scale(1.05); /* Легкая анимация увеличения */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Более глубокая тень */
+}
+
+/* Градиенты фонов */
+.check-attendance {
+    background: linear-gradient(135deg, #42A5F5, #1E88E5); /* Голубой градиент */
+    color: white;
+}
+
+.mark-attendance {
+    background: linear-gradient(135deg, #FF7043, #D84315); /* Ярко-оранжевый градиент */
+    color: white;
+}
+
+/* Заголовки */
+h2 {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Кнопки */
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.btn-check {
+    background-color: #1976D2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-mark {
+    background-color: #E53935;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #FFC107;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* === Адаптивность === */
+
+/* Адаптация для планшетов (максимум 768px ширина) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1rem; /* Уменьшаем отступы */
+        text-align: center; /* Центрируем элементы */
+    }
+
+    .logo {
+        font-size: 1.5rem; /* Уменьшаем размер логотипа */
+    }
+
+    .main-content {
+        gap: 1rem; /* Уменьшаем расстояние между секциями */
+    }
+
+    .section {
+        min-width: 250px; /* Ещё меньше минимальная ширина */
+        padding: 2rem; /* Уменьшаем внутренние отступы */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Уменьшаем заголовки */
+    }
+
+    .btn {
+        font-size: 1rem; /* Уменьшаем кнопки */
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Адаптация для телефонов (максимум 480px ширина) */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar {
+        flex-direction: column; /* Навигация становится вертикальной */
+    }
+
+    .main-content {
+        flex-direction: column; /* Секции становятся вертикальными */
+        gap: 1rem;
+    }
+
+    .section {
+        width: 100%; /* Растягиваем секции на всю ширину */
+        margin: 0; /* Убираем внешние отступы */
+        padding: 1.5rem; /* Ещё меньше внутренние отступы */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Уменьшаем размер заголовков */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Ещё меньше кнопки */
+        padding: 0.7rem 1.2rem;
+    }
+}
