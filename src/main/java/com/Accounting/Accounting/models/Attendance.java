@@ -13,6 +13,7 @@ public class Attendance {
     @ManyToOne
     private Student student;
 
+
     private LocalDate date;
 
     @Enumerated(EnumType.STRING)
@@ -53,4 +54,22 @@ public class Attendance {
     public enum AttendanceStatus{
         PRESENT, ABSENT, LATE, SICK
     }
+
+
+
+    public String getStatusInRussian() {
+        switch (this.status) {
+            case PRESENT:
+                return "Присутствует";
+            case ABSENT:
+                return "Отсутствует";
+            case LATE:
+                return "Опоздал";
+            case SICK:
+                return "Болен";
+            default:
+                return "Неизвестно";
+        }
+    }
+
 }

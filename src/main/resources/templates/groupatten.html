@@ -2,13 +2,19 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Groups</title>
+    <link rel="stylesheet" href="/css/groupatten.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
 </head>
 <body>
-<h1>Groups</h1>
-<ul>
-    <li th:each="group : ${groupaten}">
-        <a th:href="@{/groups/{groupId}/attendance(groupId=${group.id})}" th:text="${group.name}"></a>
-    </li>
-</ul>
+<div class="container">
+    <h1>Groups</h1>
+    <ul class="group-list">
+        <li th:each="group : ${groupaten}" class="group-item">
+            <a th:href="@{/groups/{groupId}/attendance(groupId=${group.id})}" th:text="${group.name}" class="group-link"></a>
+        </li>
+    </ul>
+</div>
 </body>
 </html>
