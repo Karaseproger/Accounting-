@@ -1,4 +1,4 @@
-package com.Accounting.Accounting;
+package com.Accounting.Accounting.Servise;
 
 import com.Accounting.Accounting.models.Attendance;
 import com.Accounting.Accounting.repozitory.AttendanceRepository;
