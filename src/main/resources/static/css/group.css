@@ -1,159 +1,82 @@
-/* Основные стили */
+/* Общий фон */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #ecf0f1; /* Светло-серый фон */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(135deg, #ffe8e8, #f7c1c1); /* Светлый градиент */
+    color: #4e2626; /* Глубокий бордовый */
 }
 
-/* Навигация */
+/* Навигационная панель */
 .navbar {
-    background: linear-gradient(90deg, #3E8E41, #2E7D32); /* Градиент темно-зеленый */
-    padding: 1rem;
-    color: white;
-    text-align: center; /* Центрируем текст */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Легкая тень */
+    background: #8b0000; /* Бордовый */
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3); /* Тень */
 }
 
-.logo {
+.navbar .logo {
     font-size: 1.8rem;
-    font-weight: 600;
-    margin: 0;
-    color: white;
-}
-
-/* Основной контент */
-.main-content {
-    display: flex;
-    flex-wrap: wrap; /* Перенос на новую строку для маленьких экранов */
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    gap: 1.5rem; /* Расстояние между секциями */
-}
-
-/* Секции */
-.section {
-    flex: 1 1 100%; /* Секция занимает всю ширину на маленьких экранах */
-    max-width: 400px; /* Ограничение максимальной ширины */
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
-    background-color: white; /* Белый фон */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto; /* Центрирование секций */
-}
-
-.section:hover {
-    transform: scale(1.05); /* Легкая анимация увеличения */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Глубокая тень */
-}
-
-/* Цвета секций */
-.check-attendance {
-    background: linear-gradient(135deg, #42A5F5, #1E88E5); /* Голубой градиент */
-    color: white;
-}
-
-.mark-attendance {
-    background: linear-gradient(135deg, #FF7043, #D84315); /* Ярко-оранжевый градиент */
-    color: white;
-}
-
-/* Заголовки */
-h2 {
-    margin: 0 0 1.5rem;
-    font-size: 1.6rem;
     font-weight: 700;
+    color: #ffffff;
     text-align: center;
-    text-transform: uppercase;
 }
 
-/* Кнопки */
+.navbar .accent {
+    color: #c41e3a; /* Яркий красный акцент */
+}
+
+/* Контейнер для задач */
+.tasks-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Кнопки выбора групп */
 .btn {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    color: white;
-    border-radius: 30px;
-    background-color: #1976D2; /* Синий фон */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
     text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-    margin-top: 1rem;
-    width: 100%; /* Растягиваем кнопку на всю ширину */
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #8b0000, #b22222); /* Бордовый градиент */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3); /* Тень */
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-align: center;
+    min-width: 250px; /* Минимальная ширина кнопки */
 }
 
 .btn:hover {
-    background-color: #FFC107;
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #b22222, #c41e3a); /* Более яркий градиент */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.5); /* Усиленная тень */
 }
 
-.btn:active {
-    transform: scale(0.95);
+.btn .task-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
 }
 
-/* === Адаптивность === */
-
-/* Адаптация для планшетов (максимум 768px ширина) */
+/* Адаптивность */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 0.8rem; /* Уменьшаем отступы */
-    }
-
-    .logo {
-        font-size: 1.5rem; /* Уменьшаем размер логотипа */
-    }
-
-    .section {
-        padding: 1.2rem; /* Уменьшаем внутренние отступы */
-    }
-
-    h2 {
-        font-size: 1.4rem; /* Уменьшаем заголовки */
+    .tasks-container {
+        flex-direction: column;
+        align-items: center;
     }
 
     .btn {
-        font-size: 0.9rem; /* Уменьшаем текст кнопки */
-    }
-}
-
-/* Адаптация для телефонов в вертикальной ориентации (максимум 480px ширина) */
-@media (max-width: 480px) {
-    .navbar {
-        padding: 0.6rem; /* Уменьшаем отступы в навигации */
+        font-size: 1rem;
+        padding: 15px;
+        min-width: 100%;
     }
 
-    .main-content {
-        flex-direction: column; /* Секции располагаются вертикально */
-        gap: 1rem; /* Уменьшаем расстояние между секциями */
-        padding: 1rem;
-    }
-
-    .section {
-        width: 100%; /* Секции растягиваются на всю ширину */
-        max-width: 100%; /* Убираем ограничение ширины */
-        padding: 1rem; /* Ещё меньше внутренние отступы */
-    }
-
-    h2 {
-        font-size: 1.2rem; /* Уменьшаем размер заголовков */
-    }
-
-    .btn {
-        font-size: 0.8rem; /* Уменьшаем текст кнопки */
-        padding: 0.8rem; /* Уменьшаем отступы внутри кнопки */
-        max-width: 100%; /* Растягиваем кнопку */
+    .navbar .logo {
+        font-size: 1.6rem;
     }
 }

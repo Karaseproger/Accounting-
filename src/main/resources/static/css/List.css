@@ -1,7 +1,7 @@
 /* Общие стили */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #e9f7e9, #f7fdf7); /* Лёгкий градиент фона */
+    background: linear-gradient(135deg, #ffe8e8, #f7c1c1); /* Лёгкий градиент фона */
     margin: 0;
     padding: 0;
     display: flex;
@@ -36,7 +36,7 @@ body {
 /* Заголовок */
 h1 {
     text-align: center;
-    color: #2b5d2e; /* Ещё более насыщенный тёмно-зелёный */
+    color: #8b0000; /* Бордовый */
     font-size: 32px;
     margin-bottom: 30px;
     font-weight: 700;
@@ -52,7 +52,7 @@ table {
 }
 
 thead {
-    background: #2b5d2e; /* Тёмно-зелёный фон заголовка */
+    background: #8b0000; /* Бордовый фон заголовка */
     color: #ffffff; /* Белый текст */
 }
 
@@ -73,7 +73,7 @@ tbody tr {
 
 tbody tr:hover {
     transform: translateY(-5px); /* Эффект подъёма */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Усиленная тень */
+    box-shadow: 0px 5px 15px rgba(139, 0, 0, 0.2); /* Усиленная тень */
 }
 
 td {
@@ -86,9 +86,9 @@ td {
 /* Всплывающее меню (селектор) */
 select {
     padding: 10px 15px;
-    border: 1px solid #d1e7d1; /* Светло-зелёный бордер */
+    border: 1px solid #ffcccc; /* Светло-бордовый бордер */
     border-radius: 10px;
-    background: #f8fff8; /* Лёгкий зеленоватый фон */
+    background: #fff6f6; /* Лёгкий бордовый фон */
     font-size: 14px;
     color: #3e3e3e;
     box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05); /* Внутренняя тень */
@@ -96,9 +96,9 @@ select {
 }
 
 select:focus {
-    border-color: #2b5d2e; /* Зелёная подсветка */
+    border-color: #8b0000; /* Бордовая подсветка */
     outline: none;
-    box-shadow: 0 0 10px rgba(43, 93, 46, 0.3); /* Внешняя зелёная подсветка */
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.3); /* Внешняя бордовая подсветка */
 }
 
 /* Кнопка */
@@ -108,7 +108,7 @@ button {
     font-size: 18px;
     font-weight: bold;
     color: #ffffff;
-    background: linear-gradient(135deg, #38c172, #2b5d2e); /* Зелёный градиент */
+    background: linear-gradient(135deg, #b22222, #8b0000); /* Бордовый градиент */
     border: none;
     border-radius: 12px;
     cursor: pointer;
@@ -117,9 +117,9 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #2b5d2e, #248f44); /* Градиент при наведении */
+    background: linear-gradient(135deg, #8b0000, #c41e3a); /* Яркий бордовый */
     transform: translateY(-3px);
-    box-shadow: 0px 7px 20px rgba(43, 93, 46, 0.4); /* Глубокая зелёная тень */
+    box-shadow: 0px 7px 20px rgba(139, 0, 0, 0.4); /* Глубокая бордовая тень */
 }
 
 button:active {

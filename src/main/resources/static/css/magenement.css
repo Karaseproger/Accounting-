@@ -3,12 +3,12 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f0f4f8, #dfe7fd); /* Светлый градиент */
+    background: linear-gradient(135deg, #ffe8e8, #f7c1c1); /* Светлый градиент */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #333;
+    color: #4e2626; /* Глубокий бордовый */
 }
 
 /* Контейнер */
@@ -39,7 +39,7 @@ h1 {
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
-    color: #1a237e; /* Глубокий синий */
+    color: #8b0000; /* Бордовый */
     margin-bottom: 20px;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -47,9 +47,9 @@ h1 {
 h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #3949ab; /* Средний синий */
+    color: #c41e3a; /* Красный акцент */
     margin-bottom: 15px;
-    border-bottom: 2px solid #3949ab;
+    border-bottom: 2px solid #c41e3a;
     padding-bottom: 5px;
 }
 
@@ -61,7 +61,7 @@ table {
 }
 
 thead {
-    background: #1a237e; /* Глубокий синий */
+    background: #8b0000; /* Бордовый */
     color: #ffffff; /* Белый текст */
 }
 
@@ -73,20 +73,20 @@ thead th {
 }
 
 tbody tr {
-    background: #f8f9fa; /* Светлый серый */
+    background: #ffe6e6; /* Светло-розовый */
     transition: transform 0.2s ease, box-shadow 0.3s ease;
     border-bottom: 1px solid #ddd;
 }
 
 tbody tr:hover {
     transform: scale(1.02); /* Увеличение при наведении */
-    background: #e8eaf6; /* Лёгкий синий */
+    background: #ffc1c1; /* Лёгкий красный */
 }
 
 td {
     padding: 10px;
     font-size: 0.95rem;
-    color: #333; /* Насыщенный серый */
+    color: #4e2626; /* Глубокий бордовый */
     vertical-align: middle;
 }
 
@@ -99,15 +99,15 @@ ul {
 ul li {
     padding: 8px 15px;
     margin-bottom: 5px;
-    background: #e3f2fd; /* Светло-голубой */
+    background: #ffe6e6; /* Светло-розовый */
     border-radius: 8px;
     font-size: 1rem;
-    color: #1565c0; /* Голубой текст */
+    color: #b22222; /* Красный текст */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 ul li:hover {
-    background: #bbdefb; /* Более тёмный голубой */
+    background: #f4b1b1; /* Более насыщенный розовый */
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
 }
 
@@ -121,15 +121,15 @@ ul li:hover {
     color: #ffffff;
     border-radius: 8px;
     text-align: center;
-    background: linear-gradient(135deg, #42a5f5, #1e88e5); /* Синий градиент */
-    box-shadow: 0 4px 10px rgba(66, 165, 245, 0.3); /* Глубокая тень */
+    background: linear-gradient(135deg, #8b0000, #b22222); /* Бордовый градиент */
+    box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3); /* Глубокая тень */
     transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #1e88e5, #1565c0); /* Более тёмный градиент */
+    background: linear-gradient(135deg, #b22222, #c41e3a); /* Более яркий градиент */
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(66, 165, 245, 0.5); /* Усиленная тень */
+    box-shadow: 0 6px 20px rgba(139, 0, 0, 0.5); /* Усиленная тень */
 }
 
 .btn:active {
